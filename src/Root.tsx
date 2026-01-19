@@ -2,6 +2,7 @@ import "./index.css";
 import { Composition } from "remotion";
 import { HelloWorld, myCompSchema } from "./HelloWorld";
 import { Logo, myCompSchema2 } from "./HelloWorld/Logo";
+import { AnimatedWaves } from "./AnimatedWaves";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -41,6 +42,15 @@ export const RemotionRoot: React.FC = () => {
           logoColor1: "#91dAE2" as const,
           logoColor2: "#86A8E7" as const,
         }}
+      />
+
+      <Composition
+        id="AnimatedWaves"
+        component={AnimatedWaves}
+        durationInFrames={600} // 10 seconds
+        fps={60}
+        width={3840}
+        height={2160}
       />
     </>
   );
